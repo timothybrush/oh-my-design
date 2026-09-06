@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Higgsgen — one line in, a directed still out</title>
+<meta name="description" content="Higgsgen turns one written line into a directed photograph. Fictional product, unofficial generated concept.">
+<meta name="omd-density" content="4">
+<meta name="omd-motion" content="6">
+<style>
+{{FONT_SYNE}}
+{{FONT_GEIST}}
+{{FONT_MONO}}
+{{BASE}}
+
+/* ── r7 "The flight" ─────────────────────────────────────────────────
+   한 번도 끊기지 않는 30초 카메라 비행을 스크롤이 스크럽한다.
+   구간 5개는 각각 앞 구간의 **렌더된 마지막 프레임**에서 출발해 이음매가 프레임 단위로 같다.
+   스크롤은 시간만 움직이고 카메라는 실제로 난다. */
+html{scroll-behavior:auto}
+::selection{background:var(--accent);color:#0B0C0E}
+body{overflow-x:hidden;overflow-y:auto;background:#0B0C0E}
+
+#flight{position:relative;width:100%}
+#stage{position:sticky;top:0;height:100svh;overflow:clip;background:#0B0C0E}
+#stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:auto}
+#vign{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 46%,transparent 42%,rgba(11,12,14,.72) 100%)}
+#grain{position:absolute;inset:0;pointer-events:none;opacity:.11;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 진행 레일 — 액센트가 아니라 잉크 */
+#rail{position:fixed;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.10);z-index:50}
+#rail i{position:absolute;left:0;top:0;bottom:0;width:calc(100% * var(--t,0));background:var(--ink)}
+
+/* 액트 — 비행 위에 얹히는 문장. 각 문장은 그 순간 화면에 있는 것에 대해 참이다. */
+.act{position:absolute;isolation:isolate;z-index:20;left:88px;right:auto;bottom:132px;
+  width:min(860px,66vw);padding:30px 34px 34px;background:rgba(11,12,14,.88);pointer-events:none;
+  transform:translate3d(0,18px,0);transition:opacity 280ms cubic-bezier(.22,.61,.36,1),transform 280ms cubic-bezier(.22,.61,.36,1)}
+#fold::before{content:"";position:absolute;left:0;right:0;bottom:0;top:-260px;z-index:-1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(11,12,14,.96) 0%,rgba(11,12,14,.88) 44%,rgba(11,12,14,.46) 74%,rgba(11,12,14,0) 100%)}
+#fold{isolation:isolate}
+/* JS 가 없으면 액트는 그대로 보인다 — 스크립트 없이 숨는 큰 요소를 만들지 않는다 */
+.js .act{opacity:0}
+.js .act.on{opacity:1;transform:none}
+.act.on{transform:none}
+.act h2{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.96;
+  font-size:54px;text-wrap:balance}
+.act p{margin-top:14px;color:#C6C7C8;font-size:17px;max-width:52ch}
+/* 밝은 비행 구간(소금사막·문) 위에서도 읽히도록 문장은 자기 지면 위에 놓인다 */
+.act .slug{display:block;margin-bottom:14px;font-family:'GeistMono',ui-monospace,monospace;font-size:13px;
+  letter-spacing:.04em;color:var(--mute)}
+
+/* 폴드 */
+#fold{position:absolute;z-index:24;left:0;right:0;bottom:0;padding:0 88px 132px}
+#fold h1{font-size:80px;margin-bottom:26px;max-width:15ch}
+#fold .sub{margin-bottom:30px;max-width:32ch}
+.js #fold.gone{opacity:0;transform:translate3d(0,-14px,0);transition:opacity 320ms,transform 320ms;pointer-events:none}
+
+/* 끝 — 폼 */
+#end{position:relative;min-height:100svh;display:grid;align-content:center;padding:0 88px;background:#0B0C0E}
+#end h2{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:.94;font-size:72px;margin-bottom:22px}
+#end .sub{max-width:46ch;margin-bottom:26px}
+form{display:flex;gap:12px;flex-wrap:wrap;max-width:860px}
+input[type=text]{flex:1 1 420px;height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,255,255,.05);color:var(--ink);font:inherit;font-size:16px}
+input[type=text]::placeholder{color:var(--mute)}
+input[type=text]:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button.cta-fill{border:0;cursor:pointer;font:inherit;font-size:16px;font-weight:500}
+.status{margin-top:16px;min-height:24px;color:var(--mute);font-size:15px}
+#end .foot{position:static;margin-top:56px;left:auto;bottom:auto}
+
+@media (prefers-reduced-motion: reduce){ .act{transition:none} }
+@media (max-width:900px){
+  #fold{left:0;right:0;bottom:0;padding:0 20px 104px}
+  .act{left:20px;right:20px;width:auto;bottom:104px;padding:20px 22px 24px}
+  .act h2{font-size:34px;max-width:none}
+  .act p{font-size:16px}
+  #fold h1{font-size:38px;margin-bottom:16px;max-width:none}
+  #fold .sub{margin-bottom:22px;max-width:none}
+  #fold .cta{width:100%}
+  #end{padding:0 20px}
+  #end h2{font-size:36px}
+  input[type=text]{flex:1 1 100%}
+  button.cta-fill{width:100%}
+}
+</style></head>
+<body>
+<script>document.documentElement.className="js"</script>
+
+<header><span class="mark">Higgsgen</span></header>
+
+<section id="flight" style="height:640vh">
+  <div id="stage">
+    <video id="v" playsinline muted preload="auto" poster="{{POSTER}}" aria-label="A single unbroken camera flight: a flooded underpass, out onto a salt flat at blue hour, through a lit doorway, into a ceramics workshop.">
+      <source src="{{VIDEO}}" type="video/mp4">
+    </video>
+    <div id="vign" aria-hidden="true"></div>
+    <div id="grain" aria-hidden="true"></div>
+
+    <div id="fold">
+      <h1>Light, held where you put it.</h1>
+      <p class="sub">One line in. A directed still out &mdash; the camera height, the hour and the material are yours, not the model&rsquo;s.</p>
+      <a class="cta cta-fill" href="#render">Start a render</a>
+    </div>
+
+    <div class="act" data-from="0.12" data-to="0.36">
+      <span class="slug">the underpass</span>
+      <h2>It keeps going where you point it.</h2>
+      <p>One sentence set the camera low over the water and it stayed there for the whole run.</p>
+    </div>
+    <div class="act" data-from="0.36" data-to="0.60">
+      <span class="slug">the salt flat, blue hour</span>
+      <h2>Out of the tunnel, still one take.</h2>
+      <p>No cut here. The room changed because the line changed, not because an editor did.</p>
+    </div>
+    <div class="act" data-from="0.60" data-to="0.80">
+      <span class="slug">the doorway</span>
+      <h2>Every room is one sentence away.</h2>
+      <p>A door on open water, lit from the other side. Write the next room and the camera walks through.</p>
+    </div>
+    <div class="act" data-from="0.80" data-to="1.01">
+      <span class="slug">the workshop</span>
+      <h2>The room stays. The sentence moves the camera.</h2>
+      <p>A birch bench, one unglazed vessel, late afternoon. Change a word and only that word changes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="end">
+  <a id="render" tabindex="-1" aria-hidden="true"></a>
+  <h2>Say it once.</h2>
+  <p class="sub">Write the room, the hour and the height. Higgsgen decides nothing you did not write.</p>
+  <form id="rform" novalidate>
+    <input type="text" id="prompt" name="prompt" placeholder="a narrow ceramics workshop, one unglazed vessel on a birch bench, late afternoon" aria-label="Your line">
+    <button class="cta cta-fill" type="submit">Send one line</button>
+  </form>
+  <p class="status" id="rstatus" role="status" aria-live="polite"></p>
+  <p class="foot">Fictional product &mdash; unofficial generated concept. Flight rendered as five six-second legs, each starting on the previous leg&rsquo;s final frame.</p>
+</section>
+
+<div id="rail" aria-hidden="true"><i></i></div>
+
+<script>
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)');
+  var v = document.getElementById('v'), flight = document.getElementById('flight');
+  var fold = document.getElementById('fold'), rail = document.getElementById('rail');
+  var acts = [].slice.call(document.querySelectorAll('.act'));
+
+  /* 스크롤은 목표 시간만 쓴다. 상시 rAF 루프가 현재 시간을 목표로 프레임당 α 만큼 걸어간다.
+     (fx-library/smooth-scrub-engine 과 같은 원리 — α 를 0 으로 두면 계단이 생긴다) */
+  var ALPHA = RM.matches ? 1 : 0.14, DEAD = 0.004;
+  var cur = 0, target = 0, dur = 0, ready = false;
+
+  v.addEventListener('loadedmetadata', function(){ dur = v.duration || 0; ready = true; });
+  v.addEventListener('error', function(){ document.getElementById('stage').style.background = '#0B0C0E'; });
+
+  function progress(){
+    var travel = flight.offsetHeight - innerHeight;
+    if (travel <= 0) return 0;
+    var p = -flight.getBoundingClientRect().top / travel;
+    return Math.min(Math.max(p, 0), 1);
+  }
+
+  function frame(){
+    var p = progress();
+    target = p * (dur || 0);
+    if (ready) {
+      cur += (target - cur) * ALPHA;
+      if (Math.abs(target - cur) < DEAD) cur = target;
+      if (Math.abs(v.currentTime - cur) > 0.012) { try { v.currentTime = cur; } catch (e) { /* 시킹 중 */ } }
+    }
+    rail.style.setProperty('--t', p.toFixed(4));
+    fold.classList.toggle('gone', p > 0.08);
+    for (var i = 0; i < acts.length; i++) {
+      var a = acts[i], f = +a.dataset.from, t = +a.dataset.to;
+      a.classList.toggle('on', p >= f && p <= t);
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  /* 첫 프레임을 확실히 그린다 — 자동재생 없이 정지 이미지로 시작 */
+  v.addEventListener('loadeddata', function(){ try { v.currentTime = 0.001; } catch (e) {} });
+
+  /* 폼 */
+  var f = document.getElementById('rform'), inp = document.getElementById('prompt'), st = document.getElementById('rstatus');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var val = inp.value.trim();
+    st.textContent = val
+      ? 'Queued. The first still lands where the flight ended; keep writing lines while it renders.'
+      : 'Write one line first — the room, the hour, the height.';
+    if (!val) inp.focus();
+  });
+  [].forEach.call(document.querySelectorAll('a[href="#render"]'), function(a){
+    a.addEventListener('click', function(){ setTimeout(function(){ inp.focus(); }, 320); });
+  });
+})();
+</script>
+</body></html>

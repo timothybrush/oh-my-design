@@ -76,6 +76,14 @@ for (const f of files) {
         for (const el of document.querySelectorAll("body *")) {
           const direct = [...el.childNodes].some((n) => n.nodeType === 3 && n.nodeValue.trim().length > 1); if (!direct) continue;
           const cs = getComputedStyle(el); if (cs.display === "none" || cs.visibility === "hidden" || +cs.opacity < 0.1) continue;
+          /* 조상이 투명하면 이 글자는 화면에 없다 — 안 보이는 글자의 대비를 재면 배경 픽셀과 명목색을 비교해
+             엉뚱한 실패가 난다(2026-09-06: 스크럽 스테이지 위 액트가 opacity 0 인 상태에서 1.05:1 로 보고됨). */
+          let hidden = false;
+          for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+            const acs = getComputedStyle(a);
+            if (acs.display === "none" || acs.visibility === "hidden" || +acs.opacity < 0.1) { hidden = true; break; }
+          }
+          if (hidden) continue;
           const rr = el.getBoundingClientRect(); if (rr.bottom <= 0 || rr.top >= vh || rr.width < 4 || rr.height < 4) continue;
           const fs = parseFloat(cs.fontSize), fw = parseInt(cs.fontWeight) || 400; const large = fs >= 24 || (fs >= 18.66 && fw >= 700);
           const color = (cs.color.match(/[\d.]+/g) || [0, 0, 0]).slice(0, 3).map(Number);
