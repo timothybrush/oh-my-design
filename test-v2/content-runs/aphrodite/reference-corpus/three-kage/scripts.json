@@ -1,0 +1,22 @@
+{
+  "globals": [
+    "three"
+  ],
+  "versions": {
+    "three": "149"
+  },
+  "external": [
+    {
+      "url": "https://mengto.github.io/kage/secret-pathways-assets/three.min.js",
+      "bytes": 154644,
+      "status": 200,
+      "library": "three"
+    }
+  ],
+  "inline": [
+    {
+      "bytes": 173447,
+      "head": " /* ===================================================================== KAGE — a live Kyoto mountain temple, after dark. Everything on this page is generated at runtime: no photographs, no "
+    }
+  ]
+}

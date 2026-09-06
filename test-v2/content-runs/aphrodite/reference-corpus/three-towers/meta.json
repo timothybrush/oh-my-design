@@ -1,0 +1,22 @@
+{
+  "id": "three-towers",
+  "url": "https://mengto.github.io/towers/",
+  "why": "ad hoc",
+  "capturedAt": "2026-09-06T12:17:39.346Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "httpStatus": 200,
+  "cssSheets": 1,
+  "cssBytes": 10635,
+  "cssUnreadable": [],
+  "scrollMode": "transform-container",
+  "docHeightPx": 900,
+  "assetsByType": {},
+  "libraries": [
+    "three"
+  ],
+  "scriptBytes": 0
+}

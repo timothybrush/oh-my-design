@@ -1,0 +1,34 @@
+{
+  "id": "three-threeui",
+  "url": "https://threeui.com/",
+  "why": "ad hoc",
+  "capturedAt": "2026-09-06T12:18:39.584Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "httpStatus": 200,
+  "cssSheets": 1,
+  "cssBytes": 152337,
+  "cssUnreadable": [
+    {
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+      "why": "CORS"
+    }
+  ],
+  "scrollMode": "custom-wheel",
+  "docHeightPx": 900,
+  "assetsByType": {
+    "font": {
+      "n": 3,
+      "bytes": 178228
+    },
+    "image": {
+      "n": 42,
+      "bytes": 11686160
+    }
+  },
+  "libraries": [],
+  "scriptBytes": 173701
+}

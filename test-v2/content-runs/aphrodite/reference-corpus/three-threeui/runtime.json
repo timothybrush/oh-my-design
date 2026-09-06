@@ -1,0 +1,87 @@
+{
+  "keyframes": [
+    {
+      "name": "sidebar-preview-in",
+      "steps": 2
+    },
+    {
+      "name": "purchase-status-pulse",
+      "steps": 1
+    },
+    {
+      "name": "search-result-tooltip-in",
+      "steps": 2
+    },
+    {
+      "name": "browse-item-in",
+      "steps": 1
+    }
+  ],
+  "keyframeCount": 4,
+  "animations": [],
+  "animationCount": 0,
+  "runningAnimations": 0,
+  "infiniteAnimations": 0,
+  "transitions": [
+    [
+      "0.14s, 0.14s, 0.14s ease, ease, ease",
+      176
+    ],
+    [
+      "0.18s ease",
+      34
+    ],
+    [
+      "0.14s, 0.14s, 0.14s, 0.14s ease, ease, ease, ease",
+      23
+    ],
+    [
+      "0.14s, 0.14s ease, ease",
+      13
+    ],
+    [
+      "0.15s ease-out",
+      10
+    ],
+    [
+      "0.12s ease-out",
+      7
+    ],
+    [
+      "0.3s cubic-bezier(0.32, 0.72, 0, 1)",
+      2
+    ],
+    [
+      "0.16s, 0.16s ease, ease",
+      2
+    ],
+    [
+      "0.36s cubic-bezier(0.22, 1, 0.36, 1)",
+      1
+    ],
+    [
+      "0.26s cubic-bezier(0.16, 1, 0.3, 1)",
+      1
+    ],
+    [
+      "0.2s, 0.2s ease-out, ease-out",
+      1
+    ]
+  ],
+  "canvases": [],
+  "canvasCount": 0,
+  "rafCallbacks": 2,
+  "rafCalls": 4,
+  "scrollListeners": {
+    "mousemove": 5,
+    "pointermove": 4,
+    "scroll": 4,
+    "touchmove": 4,
+    "wheel": 4
+  },
+  "intersectionObservers": 1,
+  "canvasDraws": 0,
+  "scrollMode": "custom-wheel",
+  "docHeightPx": 900,
+  "videos": []
+}

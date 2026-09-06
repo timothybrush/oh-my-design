@@ -1,0 +1,100 @@
+{
+  "keyframes": [
+    {
+      "name": "spin",
+      "steps": 1
+    },
+    {
+      "name": "pulse",
+      "steps": 1
+    },
+    {
+      "name": "enter",
+      "steps": 1
+    },
+    {
+      "name": "exit",
+      "steps": 1
+    },
+    {
+      "name": "accordion-down",
+      "steps": 2
+    },
+    {
+      "name": "accordion-up",
+      "steps": 2
+    },
+    {
+      "name": "caret-blink",
+      "steps": 2
+    },
+    {
+      "name": "scroll-fade-reveal-b",
+      "steps": 2
+    },
+    {
+      "name": "scroll-fade-reveal-s",
+      "steps": 2
+    },
+    {
+      "name": "scroll-fade-reveal-e",
+      "steps": 2
+    },
+    {
+      "name": "tw-shimmer",
+      "steps": 2
+    }
+  ],
+  "keyframeCount": 11,
+  "animations": [],
+  "animationCount": 0,
+  "runningAnimations": 0,
+  "infiniteAnimations": 0,
+  "transitions": [
+    [
+      "0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      40
+    ],
+    [
+      "0.2s, 0.2s ease, ease",
+      5
+    ],
+    [
+      "0.65s ease-out",
+      1
+    ],
+    [
+      "0.2s ease",
+      1
+    ]
+  ],
+  "canvases": [
+    {
+      "w": 749,
+      "h": 693,
+      "cssW": 749,
+      "cssH": 693
+    },
+    {
+      "w": 581,
+      "h": 538,
+      "cssW": 581,
+      "cssH": 538
+    }
+  ],
+  "canvasCount": 2,
+  "rafCallbacks": 9,
+  "rafCalls": 1402,
+  "scrollListeners": {
+    "mousemove": 4,
+    "pointermove": 6,
+    "scroll": 5,
+    "touchmove": 4,
+    "wheel": 7
+  },
+  "intersectionObservers": 3,
+  "canvasDraws": 9837,
+  "scrollMode": "native",
+  "docHeightPx": 4708,
+  "videos": []
+}

@@ -1,0 +1,50 @@
+{
+  "keyframes": [],
+  "keyframeCount": 0,
+  "animations": [],
+  "animationCount": 0,
+  "runningAnimations": 0,
+  "infiniteAnimations": 0,
+  "transitions": [
+    [
+      "0.55s, 0.55s, 0.55s ease, ease, ease",
+      22
+    ],
+    [
+      "0.18s, 0.18s ease, ease",
+      5
+    ],
+    [
+      "0.55s ease",
+      1
+    ],
+    [
+      "0.65s, 0.55s ease, ease",
+      1
+    ],
+    [
+      "0.18s ease",
+      1
+    ]
+  ],
+  "canvases": [
+    {
+      "w": 1440,
+      "h": 900,
+      "cssW": 1440,
+      "cssH": 900
+    }
+  ],
+  "canvasCount": 1,
+  "rafCallbacks": 1,
+  "rafCalls": 24,
+  "scrollListeners": {
+    "wheel": 2,
+    "pointermove": 2
+  },
+  "intersectionObservers": 0,
+  "canvasDraws": 2662,
+  "scrollMode": "transform-container",
+  "docHeightPx": 900,
+  "videos": []
+}

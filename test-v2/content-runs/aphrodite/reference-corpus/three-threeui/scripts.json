@@ -1,0 +1,62 @@
+{
+  "globals": [],
+  "versions": {},
+  "external": [
+    {
+      "url": "https://threeui.com/assets/index-2uOlf2NH.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-5WP9FS3ECK",
+      "bytes": 173701,
+      "status": 200,
+      "library": "ogl"
+    },
+    {
+      "url": "https://cdn.promotekit.com/pk.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    },
+    {
+      "url": "https://threeui.com/assets/sandboxedPageDocument-Be24TJsf.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    },
+    {
+      "url": "https://threeui.com/assets/LandingPageFrame-BQT1A9jV.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    },
+    {
+      "url": "https://threeui.com/assets/SylvaLivingWorldScene-Cb6EvvQr.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    },
+    {
+      "url": "https://threeui.com/assets/LandingPages-BKQiqPm-.js",
+      "bytes": 0,
+      "status": 200,
+      "library": null
+    }
+  ],
+  "inline": [
+    {
+      "bytes": 173,
+      "head": " window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5WP9FS3ECK'); "
+    },
+    {
+      "bytes": 1113,
+      "head": " (() => { const root = document.documentElement; const palettes = new Set([\"mono\", \"sepia\", \"azure\", \"moss\", \"mauve\"]); try { const savedTheme = localStorage.ge"
+    },
+    {
+      "bytes": 797,
+      "head": "{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareSourceCode\",\"name\":\"Sketchbook\",\"description\":\"A tactile personal portfolio built as a Singapore sketchbook, with nine illustrated plates, curled page"
+    }
+  ]
+}

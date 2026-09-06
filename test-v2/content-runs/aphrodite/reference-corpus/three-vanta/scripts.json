@@ -1,0 +1,70 @@
+{
+  "globals": [],
+  "versions": {},
+  "external": [
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/3uvkm2qcookvl.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/02hsjnio7hj2u.js",
+      "bytes": 225,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/2corl6wyj4669.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/turbopack-3_pv-pnwn_suf.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/0u2ip4gbixuzd.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/0nxby1o47tm0c.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/2_0hy8etwfgdl.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/2tctw5fcq-voo.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    },
+    {
+      "url": "https://vanta.joyehuang.app/_next/static/immutable/chunks/19sdwebquu4qy.js",
+      "bytes": 0,
+      "status": 200,
+      "library": "next"
+    }
+  ],
+  "inline": [
+    {
+      "bytes": 43,
+      "head": "(self.__next_f=self.__next_f||[]).push([0])"
+    },
+    {
+      "bytes": 5938,
+      "head": "self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[39756,[\\\"/_next/static/immutable/chunks/2corl6wyj4669.js\\\"],\\\"default\\\"]\\n3:I[37457,[\\\"/_next/static/immutable/chunks/2corl6wyj4669.js\\\"],\\\"default\\\""
+    }
+  ]
+}

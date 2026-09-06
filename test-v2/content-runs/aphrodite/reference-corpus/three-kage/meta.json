@@ -1,0 +1,27 @@
+{
+  "id": "three-kage",
+  "url": "https://mengto.github.io/kage/",
+  "why": "ad hoc",
+  "capturedAt": "2026-09-06T12:17:24.871Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "httpStatus": 200,
+  "cssSheets": 2,
+  "cssBytes": 139912,
+  "cssUnreadable": [],
+  "scrollMode": "native",
+  "docHeightPx": 5452,
+  "assetsByType": {
+    "image": {
+      "n": 14,
+      "bytes": 2565736
+    }
+  },
+  "libraries": [
+    "three"
+  ],
+  "scriptBytes": 154644
+}

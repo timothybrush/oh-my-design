@@ -1,0 +1,29 @@
+{
+  "id": "three-vanta",
+  "url": "https://vanta.joyehuang.app/",
+  "why": "ad hoc",
+  "capturedAt": "2026-09-06T12:18:46.327Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "httpStatus": 200,
+  "cssSheets": 2,
+  "cssBytes": 198522,
+  "cssUnreadable": [],
+  "scrollMode": "native",
+  "docHeightPx": 4708,
+  "assetsByType": {
+    "font": {
+      "n": 2,
+      "bytes": 52396
+    },
+    "image": {
+      "n": 3,
+      "bytes": 826741
+    }
+  },
+  "libraries": [],
+  "scriptBytes": 225
+}

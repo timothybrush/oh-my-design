@@ -1,0 +1,415 @@
+{
+  "keyframes": [
+    {
+      "name": "cue",
+      "steps": 3
+    },
+    {
+      "name": "glow-swell",
+      "steps": 2
+    },
+    {
+      "name": "glow-pulse",
+      "steps": 3
+    },
+    {
+      "name": "glow-flame",
+      "steps": 14
+    },
+    {
+      "name": "fg-sway",
+      "steps": 2
+    }
+  ],
+  "keyframeCount": 5,
+  "animations": [
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.eyebrow"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 500,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 820,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 500,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 72,
+      "target": "span.word"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 820,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 72,
+      "target": "span.word"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 500,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 820,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 500,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 72,
+      "target": "span.word"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 820,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 72,
+      "target": "span.word"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 500,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 820,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "span.word"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "p.hero-sub"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 1050,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "p.hero-sub"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.hero-cue"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 1050,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 1050,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 1050,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "transform",
+      "state": "running",
+      "dur": 1050,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.chip"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "a.peek"
+    },
+    {
+      "name": "opacity",
+      "state": "running",
+      "dur": 900,
+      "iter": 1,
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delay": 0,
+      "target": "div.hero-side"
+    },
+    {
+      "name": "cue",
+      "state": "running",
+      "dur": 2800,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i"
+    },
+    {
+      "name": "fg-sway",
+      "state": "running",
+      "dur": 21000,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "img"
+    },
+    {
+      "name": "fg-sway",
+      "state": "running",
+      "dur": 21000,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "img"
+    },
+    {
+      "name": "glow-swell",
+      "state": "running",
+      "dur": 9700,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    },
+    {
+      "name": "glow-pulse",
+      "state": "running",
+      "dur": 6100,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    },
+    {
+      "name": "glow-swell",
+      "state": "running",
+      "dur": 5300,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    },
+    {
+      "name": "glow-flame",
+      "state": "running",
+      "dur": 3700,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    },
+    {
+      "name": "glow-swell",
+      "state": "running",
+      "dur": 11200,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    },
+    {
+      "name": "glow-pulse",
+      "state": "running",
+      "dur": 7300,
+      "iter": "inf",
+      "ease": "linear",
+      "delay": 0,
+      "target": "i.glow"
+    }
+  ],
+  "animationCount": 33,
+  "runningAnimations": 33,
+  "infiniteAnimations": 9,
+  "transitions": [
+    [
+      "0.82s, 0.5s cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1)",
+      21
+    ],
+    [
+      "0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+      15
+    ],
+    [
+      "0.4s ease",
+      13
+    ],
+    [
+      "0.35s ease",
+      11
+    ],
+    [
+      "0.9s, 1.05s cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1)",
+      9
+    ],
+    [
+      "0.55s, 0.3s cubic-bezier(0.16, 1, 0.3, 1), ease",
+      8
+    ],
+    [
+      "0.7s cubic-bezier(0.16, 1, 0.3, 1)",
+      5
+    ],
+    [
+      "0.4s, 0.5s ease, cubic-bezier(0.16, 1, 0.3, 1)",
+      4
+    ],
+    [
+      "0.5s cubic-bezier(0.22, 0.61, 0.36, 1)",
+      3
+    ],
+    [
+      "0.45s, 0.45s cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1)",
+      2
+    ],
+    [
+      "0.35s, 0.35s, 0.35s, 0.35s, 0.35s, 0.3s cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1), ease, ease, ease",
+      1
+    ],
+    [
+      "0.8s, 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), ease",
+      1
+    ]
+  ],
+  "canvases": [
+    {
+      "w": 1440,
+      "h": 900,
+      "cssW": 1440,
+      "cssH": 900
+    },
+    {
+      "w": 991,
+      "h": 744,
+      "cssW": 991,
+      "cssH": 744
+    },
+    {
+      "w": 529,
+      "h": 399,
+      "cssW": 529,
+      "cssH": 399
+    },
+    {
+      "w": 529,
+      "h": 399,
+      "cssW": 529,
+      "cssH": 399
+    }
+  ],
+  "canvasCount": 4,
+  "rafCallbacks": 2,
+  "rafCalls": 71,
+  "scrollListeners": {
+    "scroll": 2,
+    "pointermove": 4
+  },
+  "intersectionObservers": 5,
+  "canvasDraws": 13991,
+  "scrollMode": "native",
+  "docHeightPx": 5452,
+  "videos": []
+}

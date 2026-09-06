@@ -1,0 +1,19 @@
+{
+  "globals": [
+    "three"
+  ],
+  "versions": {
+    "three": "149"
+  },
+  "external": [],
+  "inline": [
+    {
+      "bytes": 608081,
+      "head": "/** * @license * Copyright 2010-2023 Three.js Authors * SPDX-License-Identifier: MIT */ !function(t,e){\"object\"==typeof exports&&\"undefined\"!=typeof module?e(exports):\"function\"==typeof define&&de"
+    },
+    {
+      "bytes": 1803032,
+      "head": " /* ===================================================================== 普請 · 天守生長 — CONSTRUCTION STUDY / 01 A procedurally generated Japanese castle keep (天守) assembling itself bottom-up be"
+    }
+  ]
+}
