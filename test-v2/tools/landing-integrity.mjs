@@ -209,8 +209,16 @@ function judge(m, reveals, scrub) {
   push("LI-16", snapY ? "FAIL" : "PASS", `snap root=${m.scrollSnap.root} body=${m.scrollSnap.body}`);
   push("LI-17", reveals.clip + reveals.filter > 0 ? "FAIL" : "PASS", `reveals opacity ${reveals.opacity} · transform ${reveals.transform} · clip ${reveals.clip} · filter ${reveals.filter} (${reveals.tracked} tracked, ${reveals.steps} steps)`);
   const heroVids = m.videos.filter((v) => v.absTop < VIEWPORT.height);
-  const badHero = heroVids.filter((v) => !v.muted || !v.playsInline || !v.loop || (v.duration && v.duration > 12));
-  push("LI-18", badHero.length ? "FAIL" : "PASS", heroVids.length ? `hero video ${heroVids.length} (${badHero.length} bad)` : "no hero video (optional)");
+  /* 히어로 영상에는 두 종류가 있다. ① 자동 재생되는 장식 루프 — 짧고 반복해야 한다.
+     ② 스크롤이 시간을 스크럽하는 테이크 — 자동 재생하지 않으므로 loop 도 12초 상한도 해당이 없다
+     (2026-09-06 조건부화: r8 의 30초 연속 비행이 ①의 기준으로 오탐이 났다). */
+  const scrubbed = (v) => !v.autoplay;
+  const badHero = heroVids.filter((v) => scrubbed(v)
+    ? (!v.muted || !v.playsInline)
+    : (!v.muted || !v.playsInline || !v.loop || (v.duration && v.duration > 12)));
+  push("LI-18", badHero.length ? "FAIL" : "PASS", heroVids.length
+    ? `hero video ${heroVids.length}${heroVids.some(scrubbed) ? " (스크럽 — loop·길이 상한 미적용)" : ""} (${badHero.length} bad)`
+    : "no hero video (optional)");
   const belowPlaying = m.videos.filter((v) => v.absTop >= VIEWPORT.height && !v.paused);
   push("LI-19", belowPlaying.length ? "FAIL" : "PASS", `${belowPlaying.length} below-fold video(s) playing at load`);
   const stock = m.reflexes.imageHosts.filter(([h]) => STOCK_HOSTS.test(h));
